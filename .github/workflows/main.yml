@@ -20,4 +20,4 @@ jobs:
         run: pip install trufflehog3
 
       - name: Run Trufflehog3 Scan
-        run: trufflehog3 .
+        run: trufflehog3 . --branch "$(git branch --show-current)" -c joko-trufflehog3.yml -s MEDIUM --zero
